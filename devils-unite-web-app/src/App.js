@@ -1,11 +1,15 @@
-import logo from './logo.svg';
+import logo from './asu_logo.png';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <div className="about-container">
-        <h1>About Us</h1>
+        <div className="about-heading">
+          <img  src={logo} width={100} height={100} alt="fireSpot"/>
+          <h1>Devils Unite</h1>
+        </div>
+        <h2>About Us</h2>
         <p>
           At Sagas, we're revolutionizing the way students engage and connect
           within their university communities. We understand that each campus is
