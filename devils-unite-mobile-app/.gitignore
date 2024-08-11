@@ -19,5 +19,8 @@ web-build/
 expo-env.d.ts
 # @end expo-cli
 
-# Ignore Firebase config file
-/Users/georgebadulescu/Documents/Projects/DevilUnite/devils-unite-mobile-app/FirebaseConfig.ts
+
+
+# Environment variables
+.env
+
