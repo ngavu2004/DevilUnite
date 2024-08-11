@@ -1,22 +1,34 @@
 export const USERS = [
     {
-        user: 'johnDoe89',
-        image: "https://st2.depositphotos.com/4046139/7954/i/450/depositphotos_79545232-stock-photo-mature-african-american-man.jpg"
+        user: 'CodeDevils',
+        image: "https://se-images.campuslabs.com/clink/images/148cb43d-2a0a-4f01-9343-625d319089fcfdfaef25-8c55-426e-ba24-22d87ed23efb.png?preset=med-sq"
     },
     {
-        user: 'jane.smithie',
-        image: "https://www.shutterstock.com/shutterstock/photos/1865153395/display_1500/stock-photo-portrait-of-young-smiling-woman-looking-at-camera-with-crossed-arms-happy-girl-standing-in-1865153395.jpg"
+        user: 'Cube Devils',
+        image: "https://se-images.campuslabs.com/clink/images/97710de6-cc91-4fff-ae12-58cd18a586deddf4c3fc-e955-418d-bedd-a5cfd2bcd780.png?preset=med-sq"
     },
     {
-        user: 'aliceJ_211',
-        image: "https://media.istockphoto.com/id/1587604256/photo/portrait-lawyer-and-black-woman-with-tablet-smile-and-happy-in-office-workplace-african.jpg?b=1&s=612x612&w=0&k=20&c=4K6Bf1I6OnKzJmLaqVArPqIBTZ3VnDGJfx6hohXb1pg="
+        user: 'Dancing Devils at ASU',
+        image: "https://se-images.campuslabs.com/clink/images/87e5235c-0134-432f-b7f2-1a2de2a993835c04051a-aea4-466c-9b03-8b9db7b9377f.jpg?preset=med-sq"
     },
     {
-        user: 'robbieBBd',
-        image: "https://expertphotography.b-cdn.net/wp-content/uploads/2019/02/Avoid-These-Stock-Images-5.jpg"
+        user: 'Case Devils',
+        image: "https://se-images.campuslabs.com/clink/images/4cb0e6e8-f1ca-4982-9ec9-30f9cb66cd00a9f322c2-b3eb-47e8-b001-12cc393c77b1.png?preset=med-sq"
     },
     {
-        user: 'emilyDavis99',
-        image: "https://media.glamour.com/photos/56965ef293ef4b095210a995/master/pass/fashion-2013-10-ariane-main.jpg"
+        user: 'ASASU',
+        image: "https://se-images.campuslabs.com/clink/images/de90028d-ccfc-4bd8-99a2-4af715785d012938fe43-021c-40d7-beac-39739446b062.png?preset=small-sq"
+    },
+    {
+        user: 'Adventure Devils',
+        image: "https://se-images.campuslabs.com/clink/images/86713b16-adb6-4b37-a523-07f4dfae77ff836d785b-0707-457e-babb-637c4121c4d9.jpg?preset=med-sq"
+    },
+    {
+        user: 'CBSS',
+        image: "https://se-images.campuslabs.com/clink/images/097561f0-3620-4dfc-9b26-15f714e9b3672b90be1e-b814-44de-b89f-64f1d8ea4584.png?preset=med-sq"
+    },
+    {
+        user: 'Physics_Students',
+        image: "https://se-images.campuslabs.com/clink/images/cd58b629-9d72-472e-bbda-bafeb5f2df1d9c6baf19-cd26-4e9c-b753-10d53b0caad2.jpg?preset=med-sq"
     }
 ];

@@ -1,54 +1,67 @@
 import { View, Text, ScrollView, Dimensions, Alert, Image } from "react-native";
-import React from 'react'
-import { SafeAreaView } from 'react-native-safe-area-context'
-import { useState,useGlobalContext } from "react";
+import React, { useState } from "react";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { Link, router } from "expo-router";
+import { FIREBASE_AUTH } from '../../FirebaseConfig';
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 import { images } from "../../constants";
-import  CustomButton  from "../../components/CustomButton";
+import CustomButton from "../../components/CustomButton";
 import FormField from "../../components/FormField";
-
 
 const SignIn = () => {
   const [isSubmitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
     email: "",
     password: "",
-  })
-  const submit = () => {
+  });
 
-  }
+  const auth = FIREBASE_AUTH;
+
+  const submit = async () => {
+    setSubmitting(true);
+    try {
+      await signInWithEmailAndPassword(auth, form.email, form.password);
+      Alert.alert("Success", "You have successfully signed in!");
+      router.push("/home");
+    } catch (error) {
+      Alert.alert("Sign in failed ", error.message);
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
   return (
-    <SafeAreaView className = "bg-primary h-full">
+    <SafeAreaView className="bg-white h-full">
       <ScrollView>
-        <View className="w-full flex justify-center  min-h-[75vh] px-4 my-6">
+        <View className="w-full flex justify-center min-h-[75vh] px-4 my-6">
           <View className="items-center">
-        <Image
-            source={images.logo}
-            resizeMode="contain"
-            className="w-[140px] h-[180px]"
-          />
+            <Image
+              source={images.logo}
+              resizeMode="contain"
+              className="w-[140px] h-[180px]"
+            />
           </View>
           <Text className="text-2xl font-semibold text-black mt-10 font-psemibold">
             Log in to Devils Unite
           </Text>
           <FormField
-          title="Email"
-          value = {form.email}
-          handleChangeText={(e) => setForm({ ...form, email: e })}
-          otherStyles="mt-7"
-          keyboardType="email-address"
+            title="Email"
+            value={form.email}
+            handleChangeText={(e) => setForm({ ...form, email: e })}
+            otherStyles="mt-7"
+            keyboardType="email-address"
           />
-
           <FormField
             title="Password"
             value={form.password}
             handleChangeText={(e) => setForm({ ...form, password: e })}
             otherStyles="mt-7"
+            secureTextEntry
           />
-         <CustomButton
+          <CustomButton
             title="Sign In"
-            handlePress={() => router.push("/home")}
+            handlePress={submit}
             containerStyles="mt-10"
             isLoading={isSubmitting}
           />
@@ -60,13 +73,13 @@ const SignIn = () => {
               href="/sign-up"
               className="text-lg font-psemibold text-black"
             >
-              Signup
+              Sign up
             </Link>
           </View>
         </View>
       </ScrollView>
     </SafeAreaView>
-  )
-}
+  );
+};
 
-export default SignIn
+export default SignIn;

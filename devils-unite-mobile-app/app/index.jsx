@@ -9,7 +9,7 @@ import { images } from '../constants';
 
 export default function App() {
   return (
-    <SafeAreaView className ="bg-primary h-full">
+    <SafeAreaView className ="bg-white h-full">
       <ScrollView
         contentContainerStyle={{
           flexGrow: 1,

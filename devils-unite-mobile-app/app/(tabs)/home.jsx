@@ -8,7 +8,7 @@ import { POSTS } from '../../data/posts';
 
 const Home = () => {
   return (
-    <SafeAreaView className="bg-primary h-full flex-1 -top-12">
+    <SafeAreaView className="bg-white h-full flex-1 -top-12">
       <Header />
       <Stories />
       <View className = "h-full -top-5">
